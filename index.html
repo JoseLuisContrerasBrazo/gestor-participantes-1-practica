@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de participantes</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header>
+    <h1>Gestor de participantes</h1>
+    <nav><a href="index.html">Inicio</a><a href="panel.html">Panel</a><a href="ayuda.html">Ayuda</a></nav>
+</header>
+<main>
+    <section class="card">
+        <h2>Buscar participantes</h2>
+        <label for="busqueda">Nombre, correo o tipo:</label>
+        <input id="busqueda" type="search" placeholder="Buscar...">
+        <button id="buscar">Buscar</button>
+        <div id="listaParticipantes">Cargando...</div>
+    </section>
+    <section class="card">
+        <h2>Consultar por ID</h2>
+        <form id="formConsultaId">
+            <label for="consultaId">ID del participante</label>
+            <input id="consultaId" name="id" type="number" min="1" step="1" required>
+            <button type="submit">Consultar</button>
+        </form>
+        <p id="resultadoConsultaId" aria-live="polite"></p>
+    </section>
+    <section class="card">
+        <h2>Nuevo participante</h2>
+        <form id="formParticipante">
+            <label for="nombre">Nombre</label><input id="nombre" name="nombre" required>
+            <label for="apellidos">Apellidos</label><input id="apellidos" name="apellidos" required>
+            <label for="email">Correo</label><input id="email" name="email" type="email" required>
+            <label for="tipo">Tipo</label>
+            <select id="tipo" name="tipo">
+                <option value="Alumno">Alumno</option><option value="Profesor">Profesor</option>
+            </select>
+            <button type="submit">Guardar participante</button>
+        </form>
+        <p id="mensaje"></p>
+    </section>
+    <section class="card">
+        <h2>Preferencia de tema</h2>
+        <button id="temaClaro">Claro</button><button id="temaOscuro">Oscuro</button>
+        <p id="temaActual"></p>
+    </section>
+    <section class="card"><h2>Contador de visitas</h2><p id="visitas">Cargando...</p></section>
+    <section class="card">
+        <h2>Cesta de participantes</h2><div id="cesta">Cargando...</div>
+        <button id="vaciarCesta">Vaciar cesta</button>
+    </section>
+</main>
+<script src="panel.js"></script>
+</body>
+</html>
