@@ -165,3 +165,6 @@ El contador y la cesta se pierden al reiniciar el servidor porque MemoryStore gu
 
 MemoryStore solo es adecuado para esta práctica local. En producción se necesita un almacén externo compartido.
 
+## Enlace al chat de IA
+https://chatgpt.com/share/6acf2672-5a38-83eb-b3b1-031587c318a4
+
